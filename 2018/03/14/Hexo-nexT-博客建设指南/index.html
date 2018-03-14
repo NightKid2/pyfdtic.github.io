@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="pyfdtic&#39;s blog">
 <meta property="og:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T10:13:53.301Z">
+<meta property="og:updated_time" content="2018-03-14T10:27:46.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT 博客建设指南">
 <meta name="twitter:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
@@ -191,6 +191,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -211,12 +221,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            归档
+            关于
           </a>
         </li>
       
@@ -354,7 +364,7 @@ $ npm install -g hexo-cli
 $ chmod 700 /root
 
 $ npm install -g hexo-cli
-</code></pre><h3 id="5-建站"><a href="#5-建站" class="headerlink" title="5. 建站"></a>5. 建站</h3><pre><code>$ hexo init &lt;floder&gt;
+</code></pre><h3 id="5-建站"><a href="#5-建站" class="headerlink" title="5. 建站"></a>5. 建站</h3><h4 id="5-1-安装配置"><a href="#5-1-安装配置" class="headerlink" title="5.1 安装配置"></a>5.1 安装配置</h4><pre><code>$ hexo init &lt;floder&gt;
 $ cd &lt;floder&gt;
 $ npm install
 
@@ -383,7 +393,7 @@ $ npm install hexo-server --save
 
 # 启动 hexo server
 $ hexo server --ip=0.0.0.0
-</code></pre><h3 id="5-写文章与提交部署"><a href="#5-写文章与提交部署" class="headerlink" title="5. 写文章与提交部署"></a>5. 写文章与提交部署</h3><pre><code># 安装 hexo-deployer-git 部署方式
+</code></pre><h4 id="5-2-写文章与提交部署"><a href="#5-2-写文章与提交部署" class="headerlink" title="5.2 写文章与提交部署"></a>5.2 写文章与提交部署</h4><pre><code># 安装 hexo-deployer-git 部署方式
 $ npm install hexo-deployer-git --save
 
 # 配置部署方式
@@ -418,7 +428,183 @@ $ hexo g -d
 # 密钥认证提交
 $ vim _config.yml 
     其中 repo 配置为 ssh 协议地址
+
+    # 语言配置
+    language: zh-Hans
+
 $ 在 github 上配置 ssh 密钥.
+</code></pre><h4 id="5-4-配置主题"><a href="#5-4-配置主题" class="headerlink" title="5.4 配置主题"></a>5.4 配置主题</h4><p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">文档</a></p>
+<pre><code>$ vim themes/next/_config.yml
+    # 主页预览显示
+    auto_excerpt:
+      enable: true
+      length: 250
+
+    # 选择不同的主体
+    #scheme: Muse
+    scheme: Mist
+
+    # 主页设置
+    menu:
+      home: / || home
+      about: /about/ || user
+      tags: /tags/ || tags
+      categories: /categories/ || th
+      archives: /archives/ || archive
+</code></pre><p><code>tags/categories</code> 页面</p>
+<pre><code># tags
+$ hexo new page &quot;tags&quot;
+$ vim source/tags/index.md
+    ---
+    title: Tags
+    date: 2018-03-14 18:09:40
+    type: &quot;tags&quot;
+    comments: false
+    ---
+
+$ vim themes/next/_config.yml
+    menu:
+      # ...
+      tags: /tags/ || tags
+      # ...
+
+# categories
+$ hexo new page &quot;categories&quot;
+$ vim source/categories/index.md
+    ---
+    title: Tags
+    date: 2018-03-14 18:09:40
+    type: &quot;categories&quot;
+    comments: false
+    ---
+
+$ vim themes/next/_config.yml
+    menu:
+      # ...
+      categories: /categories/ || th
+      # ...
+</code></pre><p><code>about</code>页面</p>
+<pre><code>$ hexo new page &quot;about&quot;
+</code></pre><p>谷歌/百度统计</p>
+<pre><code>$ vim _config.yml
+
+    google_analytics: your-analytics-id
+    baidu_analytics: your-analytics-id
+</code></pre><h4 id="主题配置参考"><a href="#主题配置参考" class="headerlink" title="主题配置参考"></a>主题配置参考</h4><p><strong>站点配置</strong></p>
+<pre><code># =============================================================================
+# NexT Theme configuration
+# =============================================================================
+
+avatar: https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460
+
+# Duoshuo
+duoshuo_shortname: notes-iissnan
+
+# Disqus
+disqus_shortname: 
+
+
+# Social links
+social:
+  GitHub: https://github.com/iissnan
+  Twitter: https://twitter.com/iissnan
+  Weibo: http://weibo.com/iissnan
+  DouBan: http://douban.com/people/iissnan
+  ZhiHu: http://www.zhihu.com/people/iissnan
+
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification: VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0
+
+
+# Google Analytics
+# Google分析ID
+google_analytics:
+
+
+# 百度分析ID
+baidu_analytics: 50c15455e37f70aea674ff4a663eef27
+
+# Specify the date when the site was setup
+since: 2011
+
+# =============================================================================
+# End NexT Theme configuration
+# =============================================================================
+</code></pre><p><strong>主题配置文件</strong></p>
+<pre><code>menu:
+  home: /
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  #about: /about
+
+# Place your favicon.ico to /source directory.
+favicon: /favicon.ico
+
+# Set default keywords (Use a comma to separate)
+keywords: &quot;Hexo,next&quot;
+
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site&apos;s feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
+
+# Icon fonts
+# Place your font into next/source/fonts, specify directory-name and font-name here
+# Avialable: default | linecons | fifty-shades | feather
+#icon_font: default
+#icon_font: fifty-shades
+#icon_font: feather
+icon_font: linecons
+
+# Code Highlight theme
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
+
+# MathJax Support
+mathjax:
+
+
+# Schemes
+scheme: Mist
+
+
+# Automatically scroll page to section which is under &lt;!-- more --&gt; mark.
+scroll_to_more: true
+
+
+
+# Automatically add list number to toc.
+toc_list_number: true
+
+
+## DO NOT EDIT THE FOLLOWING SETTINGS
+## UNLESS YOU KNOW WHAT YOU ARE DOING
+
+# Use velocity to animate everything.
+use_motion: true
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: vendors
+css: css
+images: images
+
+# Theme version
+version: 0.4.2
+</code></pre><h4 id="5-4-删除文章"><a href="#5-4-删除文章" class="headerlink" title="5.4 删除文章"></a>5.4 删除文章</h4><pre><code>$ hexo clean
+$ hexo g -d
 </code></pre><h3 id="6-配置-config-yml"><a href="#6-配置-config-yml" class="headerlink" title="6. 配置 _config.yml"></a>6. 配置 _config.yml</h3><h4 id="6-1-网站"><a href="#6-1-网站" class="headerlink" title="6.1 网站"></a>6.1 网站</h4><table>
 <thead>
 <tr>
@@ -1215,7 +1401,7 @@ $ hexo deploy
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-搭建-Github-博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo 搭建 Github 博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-开始使用"><span class="nav-number">1.1.</span> <span class="nav-text">一. 开始使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-git"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 安装 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-NodeJS"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 安装 NodeJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置-Github"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 设置 Github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-注册-github"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">3.1 注册 github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-创建-github-page"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">3.2 创建 github page</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装-hexo-cli"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 安装 hexo-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-建站"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-写文章与提交部署"><span class="nav-number">1.1.6.</span> <span class="nav-text">5. 写文章与提交部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-配置-config-yml"><span class="nav-number">1.1.7.</span> <span class="nav-text">6. 配置 _config.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-网站"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">6.1 网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-网址"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">6.2 网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-目录"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">6.3 目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-文章"><span class="nav-number">1.1.7.4.</span> <span class="nav-text">6.4 文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-分类-amp-标签"><span class="nav-number">1.1.7.5.</span> <span class="nav-text">6.5 分类 &amp; 标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-6-日期-时间格式"><span class="nav-number">1.1.7.6.</span> <span class="nav-text">6.6 日期/时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-分页"><span class="nav-number">1.1.7.7.</span> <span class="nav-text">6.7 分页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-8-扩展"><span class="nav-number">1.1.7.8.</span> <span class="nav-text">6.8 扩展</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-指令"><span class="nav-number">1.1.8.</span> <span class="nav-text">7. 指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-基本操作"><span class="nav-number">1.2.</span> <span class="nav-text">二. 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-写作"><span class="nav-number">1.3.</span> <span class="nav-text">1. 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-新建文章"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.1 新建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-文章布局"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.2 文章布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-草稿"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1.2.1 草稿</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-文件名称"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3 文件名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-模板-scaffold"><span class="nav-number">1.3.4.</span> <span class="nav-text">1.4 模板(scaffold)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-使用方法"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">1.4.1 使用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-模板中的可用变量"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">1.4.2 模板中的可用变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Front-matter"><span class="nav-number">1.4.</span> <span class="nav-text">2. Front-matter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-使用格式及预定义参数"><span class="nav-number">1.4.1.</span> <span class="nav-text">2.1 使用格式及预定义参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-分类和标签"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.2 分类和标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-JSON-Front-matter"><span class="nav-number">1.4.3.</span> <span class="nav-text">2.3 JSON Front-matter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标签插件-Tag-Plugins"><span class="nav-number">1.5.</span> <span class="nav-text">3. 标签插件(Tag Plugins)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-引用块"><span class="nav-number">1.5.1.</span> <span class="nav-text">3.1 引用块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-代码块"><span class="nav-number">1.5.2.</span> <span class="nav-text">3.2 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-反引号代码块"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.3 反引号代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Pull-Quote"><span class="nav-number">1.5.4.</span> <span class="nav-text">3.4 Pull Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-jsFiddle"><span class="nav-number">1.5.5.</span> <span class="nav-text">3.5 jsFiddle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-Gist"><span class="nav-number">1.5.6.</span> <span class="nav-text">3.6 Gist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-iframe"><span class="nav-number">1.5.7.</span> <span class="nav-text">3.7 iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-Image"><span class="nav-number">1.5.8.</span> <span class="nav-text">3.8 Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-Link"><span class="nav-number">1.5.9.</span> <span class="nav-text">3.9 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-10-Include-Code"><span class="nav-number">1.5.10.</span> <span class="nav-text">3.10 Include Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-11-Youtube"><span class="nav-number">1.5.11.</span> <span class="nav-text">3.11 Youtube</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-12-Vimeo"><span class="nav-number">1.5.12.</span> <span class="nav-text">3.12 Vimeo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-13-引用文章"><span class="nav-number">1.5.13.</span> <span class="nav-text">3.13 引用文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-14-引用资源"><span class="nav-number">1.5.14.</span> <span class="nav-text">3.14 引用资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-15-Raw"><span class="nav-number">1.5.15.</span> <span class="nav-text">3.15 Raw</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-资源文件夹"><span class="nav-number">1.6.</span> <span class="nav-text">4. 资源文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-文章资源文件夹"><span class="nav-number">1.6.1.</span> <span class="nav-text">4.1 文章资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-相对路径引用的标签插件"><span class="nav-number">1.6.2.</span> <span class="nav-text">4.2 相对路径引用的标签插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-数据文件"><span class="nav-number">1.7.</span> <span class="nav-text">5. 数据文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-服务器"><span class="nav-number">1.8.</span> <span class="nav-text">6. 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-hexo-server"><span class="nav-number">1.8.1.</span> <span class="nav-text">6.1 hexo-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Pow"><span class="nav-number">1.8.2.</span> <span class="nav-text">6.2 Pow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-生成器"><span class="nav-number">1.9.</span> <span class="nav-text">7. 生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-生成文件"><span class="nav-number">1.9.1.</span> <span class="nav-text">7.1 生成文件:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-完成后部署"><span class="nav-number">1.9.2.</span> <span class="nav-text">7.2 完成后部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-部署"><span class="nav-number">1.10.</span> <span class="nav-text">8. 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-git-部署"><span class="nav-number">1.10.1.</span> <span class="nav-text">8.1 git 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Heroku-部署"><span class="nav-number">1.10.2.</span> <span class="nav-text">8.2 Heroku 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-Rsync-部署"><span class="nav-number">1.10.3.</span> <span class="nav-text">8.3 Rsync 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-OpenShift-部署"><span class="nav-number">1.10.4.</span> <span class="nav-text">8.4 OpenShift 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-FTPSync-部署"><span class="nav-number">1.10.5.</span> <span class="nav-text">8.5 FTPSync 部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-自定义"><span class="nav-number">1.11.</span> <span class="nav-text">三.自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-永久链接-Permalink"><span class="nav-number">1.11.1.</span> <span class="nav-text">1. 永久链接(Permalink)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-主题"><span class="nav-number">1.11.2.</span> <span class="nav-text">2. 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-修改主题"><span class="nav-number">1.11.2.1.</span> <span class="nav-text">2.1 修改主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-主题目录结构"><span class="nav-number">1.11.2.2.</span> <span class="nav-text">2.2 主题目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-1-config-yml"><span class="nav-number">1.11.2.2.1.</span> <span class="nav-text">2.2.1 _config.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-languages"><span class="nav-number">1.11.2.2.2.</span> <span class="nav-text">2.2.2 languages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-3-layout"><span class="nav-number">1.11.2.2.3.</span> <span class="nav-text">2.2.3 layout</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-4-scripts"><span class="nav-number">1.11.2.2.4.</span> <span class="nav-text">2.2.4 scripts</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-5-source"><span class="nav-number">1.11.2.2.5.</span> <span class="nav-text">2.2.5 source</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-模板"><span class="nav-number">1.11.3.</span> <span class="nav-text">3. 模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-变量"><span class="nav-number">1.11.4.</span> <span class="nav-text">4. 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-辅助函数"><span class="nav-number">1.11.5.</span> <span class="nav-text">5. 辅助函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-国际化-i18n"><span class="nav-number">1.11.6.</span> <span class="nav-text">6. 国际化(i18n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-插件"><span class="nav-number">1.11.7.</span> <span class="nav-text">7. 插件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nexT"><span class="nav-number">2.</span> <span class="nav-text">nexT</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-搭建-Github-博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo 搭建 Github 博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-开始使用"><span class="nav-number">1.1.</span> <span class="nav-text">一. 开始使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-git"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 安装 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-NodeJS"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 安装 NodeJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置-Github"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 设置 Github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-注册-github"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">3.1 注册 github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-创建-github-page"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">3.2 创建 github page</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装-hexo-cli"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 安装 hexo-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-建站"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 建站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-安装配置"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">5.1 安装配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-写文章与提交部署"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">5.2 写文章与提交部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-配置主题"><span class="nav-number">1.1.5.3.</span> <span class="nav-text">5.4 配置主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题配置参考"><span class="nav-number">1.1.5.4.</span> <span class="nav-text">主题配置参考</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-删除文章"><span class="nav-number">1.1.5.5.</span> <span class="nav-text">5.4 删除文章</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-配置-config-yml"><span class="nav-number">1.1.6.</span> <span class="nav-text">6. 配置 _config.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-网站"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">6.1 网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-网址"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">6.2 网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-目录"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">6.3 目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-文章"><span class="nav-number">1.1.6.4.</span> <span class="nav-text">6.4 文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-分类-amp-标签"><span class="nav-number">1.1.6.5.</span> <span class="nav-text">6.5 分类 &amp; 标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-6-日期-时间格式"><span class="nav-number">1.1.6.6.</span> <span class="nav-text">6.6 日期/时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-分页"><span class="nav-number">1.1.6.7.</span> <span class="nav-text">6.7 分页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-8-扩展"><span class="nav-number">1.1.6.8.</span> <span class="nav-text">6.8 扩展</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-指令"><span class="nav-number">1.1.7.</span> <span class="nav-text">7. 指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-基本操作"><span class="nav-number">1.2.</span> <span class="nav-text">二. 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-写作"><span class="nav-number">1.3.</span> <span class="nav-text">1. 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-新建文章"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.1 新建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-文章布局"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.2 文章布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-草稿"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1.2.1 草稿</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-文件名称"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3 文件名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-模板-scaffold"><span class="nav-number">1.3.4.</span> <span class="nav-text">1.4 模板(scaffold)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1-使用方法"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">1.4.1 使用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2-模板中的可用变量"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">1.4.2 模板中的可用变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Front-matter"><span class="nav-number">1.4.</span> <span class="nav-text">2. Front-matter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-使用格式及预定义参数"><span class="nav-number">1.4.1.</span> <span class="nav-text">2.1 使用格式及预定义参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-分类和标签"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.2 分类和标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-JSON-Front-matter"><span class="nav-number">1.4.3.</span> <span class="nav-text">2.3 JSON Front-matter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标签插件-Tag-Plugins"><span class="nav-number">1.5.</span> <span class="nav-text">3. 标签插件(Tag Plugins)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-引用块"><span class="nav-number">1.5.1.</span> <span class="nav-text">3.1 引用块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-代码块"><span class="nav-number">1.5.2.</span> <span class="nav-text">3.2 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-反引号代码块"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.3 反引号代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-Pull-Quote"><span class="nav-number">1.5.4.</span> <span class="nav-text">3.4 Pull Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-jsFiddle"><span class="nav-number">1.5.5.</span> <span class="nav-text">3.5 jsFiddle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-Gist"><span class="nav-number">1.5.6.</span> <span class="nav-text">3.6 Gist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-iframe"><span class="nav-number">1.5.7.</span> <span class="nav-text">3.7 iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-Image"><span class="nav-number">1.5.8.</span> <span class="nav-text">3.8 Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-Link"><span class="nav-number">1.5.9.</span> <span class="nav-text">3.9 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-10-Include-Code"><span class="nav-number">1.5.10.</span> <span class="nav-text">3.10 Include Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-11-Youtube"><span class="nav-number">1.5.11.</span> <span class="nav-text">3.11 Youtube</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-12-Vimeo"><span class="nav-number">1.5.12.</span> <span class="nav-text">3.12 Vimeo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-13-引用文章"><span class="nav-number">1.5.13.</span> <span class="nav-text">3.13 引用文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-14-引用资源"><span class="nav-number">1.5.14.</span> <span class="nav-text">3.14 引用资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-15-Raw"><span class="nav-number">1.5.15.</span> <span class="nav-text">3.15 Raw</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-资源文件夹"><span class="nav-number">1.6.</span> <span class="nav-text">4. 资源文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-文章资源文件夹"><span class="nav-number">1.6.1.</span> <span class="nav-text">4.1 文章资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-相对路径引用的标签插件"><span class="nav-number">1.6.2.</span> <span class="nav-text">4.2 相对路径引用的标签插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-数据文件"><span class="nav-number">1.7.</span> <span class="nav-text">5. 数据文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-服务器"><span class="nav-number">1.8.</span> <span class="nav-text">6. 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-hexo-server"><span class="nav-number">1.8.1.</span> <span class="nav-text">6.1 hexo-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Pow"><span class="nav-number">1.8.2.</span> <span class="nav-text">6.2 Pow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-生成器"><span class="nav-number">1.9.</span> <span class="nav-text">7. 生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-生成文件"><span class="nav-number">1.9.1.</span> <span class="nav-text">7.1 生成文件:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-完成后部署"><span class="nav-number">1.9.2.</span> <span class="nav-text">7.2 完成后部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-部署"><span class="nav-number">1.10.</span> <span class="nav-text">8. 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-git-部署"><span class="nav-number">1.10.1.</span> <span class="nav-text">8.1 git 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-Heroku-部署"><span class="nav-number">1.10.2.</span> <span class="nav-text">8.2 Heroku 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-Rsync-部署"><span class="nav-number">1.10.3.</span> <span class="nav-text">8.3 Rsync 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-OpenShift-部署"><span class="nav-number">1.10.4.</span> <span class="nav-text">8.4 OpenShift 部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-FTPSync-部署"><span class="nav-number">1.10.5.</span> <span class="nav-text">8.5 FTPSync 部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-自定义"><span class="nav-number">1.11.</span> <span class="nav-text">三.自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-永久链接-Permalink"><span class="nav-number">1.11.1.</span> <span class="nav-text">1. 永久链接(Permalink)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-主题"><span class="nav-number">1.11.2.</span> <span class="nav-text">2. 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-修改主题"><span class="nav-number">1.11.2.1.</span> <span class="nav-text">2.1 修改主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-主题目录结构"><span class="nav-number">1.11.2.2.</span> <span class="nav-text">2.2 主题目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-1-config-yml"><span class="nav-number">1.11.2.2.1.</span> <span class="nav-text">2.2.1 _config.yml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-languages"><span class="nav-number">1.11.2.2.2.</span> <span class="nav-text">2.2.2 languages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-3-layout"><span class="nav-number">1.11.2.2.3.</span> <span class="nav-text">2.2.3 layout</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-4-scripts"><span class="nav-number">1.11.2.2.4.</span> <span class="nav-text">2.2.4 scripts</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-5-source"><span class="nav-number">1.11.2.2.5.</span> <span class="nav-text">2.2.5 source</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-模板"><span class="nav-number">1.11.3.</span> <span class="nav-text">3. 模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-变量"><span class="nav-number">1.11.4.</span> <span class="nav-text">4. 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-辅助函数"><span class="nav-number">1.11.5.</span> <span class="nav-text">5. 辅助函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-国际化-i18n"><span class="nav-number">1.11.6.</span> <span class="nav-text">6. 国际化(i18n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-插件"><span class="nav-number">1.11.7.</span> <span class="nav-text">7. 插件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nexT"><span class="nav-number">2.</span> <span class="nav-text">nexT</span></a></li></ol></div>
             
 
           </div>
