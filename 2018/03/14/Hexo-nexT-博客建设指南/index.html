@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="pyfdtic&#39;s blog">
 <meta property="og:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T02:04:18.000Z">
+<meta property="og:updated_time" content="2018-03-15T02:30:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT 博客建设指南">
 <meta name="twitter:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
@@ -572,6 +572,12 @@ $ vim themes/next/_config.yml
       sitemap: /sitemap.xml || sitemap
 
 $ 在 google Search console 提交 siteamp 地图.
+</code></pre><p>配置资源文件夹</p>
+<pre><code>$ mkdir source/images
+
+# 在文章中引用
+
+    ![](/images/image.jpg)
 </code></pre><h4 id="主题配置参考"><a href="#主题配置参考" class="headerlink" title="主题配置参考"></a>主题配置参考</h4><p><strong>站点配置</strong></p>
 <pre><code># =============================================================================
 # NexT Theme configuration
@@ -1327,7 +1333,8 @@ $ hexo deploy
 <h3 id="6-国际化-i18n"><a href="#6-国际化-i18n" class="headerlink" title="6. 国际化(i18n)"></a>6. 国际化(i18n)</h3><p><a href="https://hexo.io/zh-cn/docs/internationalization.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/internationalization.html</a></p>
 <h3 id="7-插件"><a href="#7-插件" class="headerlink" title="7. 插件"></a>7. 插件</h3><p><a href="https://hexo.io/zh-cn/docs/plugins.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/plugins.html</a></p>
 <h1 id="nexT"><a href="#nexT" class="headerlink" title="nexT"></a>nexT</h1><p><a href="http://theme-next.iissnan.com/getting-started.html#third-party-services" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html#third-party-services</a></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo 文档 - 中文</a><br><a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo 文档 - 英文</a><br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">nexT 主题配置文档</a></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a><br><a href="https://github.com/iissnan/hexo-theme-next/wiki" target="_blank" rel="noopener">hexo-wiki</a></p>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo 文档 - 中文</a><br><a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo 文档 - 英文</a><br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">nexT 主题配置文档</a></p>
 
       
     </div>
@@ -1449,7 +1456,7 @@ $ hexo deploy
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
