@@ -4,11 +4,24 @@
     <title><![CDATA[Django-学习总结]]></title>
     <url>%2F2018%2F03%2F14%2FDjango-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>web development</tag>
+        <tag>django</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Ansible-学习总结]]></title>
     <url>%2F2018%2F03%2F14%2FAnsible-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>Ansible</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[AngularJS-学习总结]]></title>
