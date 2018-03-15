@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
+<meta name="description" content="初始化配置设置 Linux 换行符Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF 设置 tab 为 4 个空格.Preference -&amp;gt; Set">
 <meta name="keywords" content="sublime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime-Text-使用总结">
 <meta property="og:url" content="https://pyfdtic.github.io/2018/03/14/Sublime-Text-使用总结/index.html">
 <meta property="og:site_name" content="Pyfdtic&#39;s Blog">
-<meta property="og:description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
+<meta property="og:description" content="初始化配置设置 Linux 换行符Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF 设置 tab 为 4 个空格.Preference -&amp;gt; Set">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T04:38:54.000Z">
+<meta property="og:updated_time" content="2018-03-15T04:53:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime-Text-使用总结">
-<meta name="twitter:description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
+<meta name="twitter:description" content="初始化配置设置 Linux 换行符Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF 设置 tab 为 4 个空格.Preference -&amp;gt; Set">
 
 
 
@@ -405,63 +405,46 @@
       
 
       
-        <h2 id="1-初始化配置"><a href="#1-初始化配置" class="headerlink" title="1. 初始化配置"></a>1. 初始化配置</h2><ol>
-<li><p>设置 Linux 换行符</p>
-<pre><code>Perference-&gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项：
+        <h2 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h2><h3 id="设置-Linux-换行符"><a href="#设置-Linux-换行符" class="headerlink" title="设置 Linux 换行符"></a>设置 Linux 换行符</h3><pre><code>Perference-&gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项：
 - system : system是根据当前系统情况设置, 
 - windows : windows使用的CRLF, 
 - unix : unix使用的是 LF
-</code></pre></li>
-<li><p>设置 tab 为 4 个空格.</p>
-<pre><code>Preference -&gt; Settings-User
+</code></pre><h3 id="设置-tab-为-4-个空格"><a href="#设置-tab-为-4-个空格" class="headerlink" title="设置 tab 为 4 个空格."></a>设置 tab 为 4 个空格.</h3><pre><code>Preference -&gt; Settings-User
 
 // The number of spaces a tab is considered equal to  
 &quot;tab_size&quot;: 4,  
 // Set to true to insert spaces when tab is pressed  
 &quot;translate_tabs_to_spaces&quot;: true, 
-</code></pre></li>
-<li><p>自动保存</p>
-<pre><code>Preference -&gt; Settings-User
+</code></pre><h3 id="自动保存"><a href="#自动保存" class="headerlink" title="自动保存"></a>自动保存</h3><pre><code>Preference -&gt; Settings-User
 
 &quot;save_on_focus_lost&quot;: true
-</code></pre></li>
-</ol>
-<h2 id="2-插件"><a href="#2-插件" class="headerlink" title="2. 插件"></a>2. 插件</h2><ol>
-<li><p>install package controll</p>
-<pre><code>SUBLIME TEXT 3
+</code></pre><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="install-package-controll"><a href="#install-package-controll" class="headerlink" title="install package controll"></a>install package controll</h3><pre><code>SUBLIME TEXT 3
 
     import urllib.request,os,hashlib; h = &apos;df21e130d211cfc94d9b0905775a7c0f&apos; + &apos;1e3d39e33b79698005270310898eea76&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)      
 
 SUBLIME TEXT 2
 
     import urllib2,os,hashlib; h = &apos;df21e130d211cfc94d9b0905775a7c0f&apos; + &apos;1e3d39e33b79698005270310898eea76&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), &apos;wb&apos; ).write(by) if dh == h else None; print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h) if dh != h else &apos;Please restart Sublime Text to finish installation&apos;)
-</code></pre></li>
-<li><p>大块方框, </p>
-<pre><code>Sublime &gt; Preferences &gt; Package Settings &gt; Anaconda &gt; Settings User
+</code></pre><h3 id="大块方框"><a href="#大块方框" class="headerlink" title="大块方框,"></a>大块方框,</h3><pre><code>Sublime &gt; Preferences &gt; Package Settings &gt; Anaconda &gt; Settings User
 
 {&quot;anaconda_linting&quot;: false}
-</code></pre></li>
-<li><p>中文输入法光标跟随</p>
-<pre><code>Packages Control -&gt; install -&gt; IMESupport
-</code></pre></li>
-<li><p>常用插件</p>
-<p> <code>SublimeLinter</code> : 用于高亮提示用户编写的代码中存在的不规范和错误的写法, 支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言. </p>
-<p> <code>SideBarEnhancements</code> : SideBarEnhancements是一款很实用的右键菜单增强插件；在安装该插件前, 在Sublime Text左侧FOLDERS栏中点击右键, 只有寥寥几个简单的功能</p>
-<p> <code>Javascript-API-Completions</code> : 支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件, 是少数支持sublime text 3的后缀提示的插件, HTML5标签提示sublime text3自带, 不过JQuery提示还是很有用处的, 也可设置要提示的语言. </p>
-<p> <code>Git</code> : </p>
-<p> <code>Glue</code> : 会在界面下方显示一个小窗口, 你可以在那里写Shell脚本. 这样一来, 你的编辑器就不仅仅局限于使用Git了</p>
-<p> <code>GitGutter &amp; Modifi</code>c : 这些插件可以高亮相对于上次提交有所变动的行, 换句话说是实时的diff工具</p>
-<pre><code>GitGutter : 这是一个小巧有用的插件, 它会告诉你自上次git commit以来已经改变的行. 一个指示器显示在行号的旁边. 
-</code></pre><p> <code>PlainTasks</code> : 杰出的待办事项表！所有的任务都保持在文件中, 所以可以很方便的把任务和项目绑定在一起. 可以创建项目, 贴标签, 设置日期. 有竞争力的用户界面和快捷键. </p>
-<p> <code>Lua</code> : </p>
-<p> <code>Python</code> : </p>
-<p> <code>AllAutocomplete</code> : 搜索全部打开的标签页</p>
-<p> <code>Emmet</code> : HTML 快速补全</p>
-<p> <code>markdown</code> : </p>
-<p> <code>anaconda</code> : Python IDE</p>
+</code></pre><h3 id="中文输入法光标跟随"><a href="#中文输入法光标跟随" class="headerlink" title="中文输入法光标跟随"></a>中文输入法光标跟随</h3><pre><code>Packages Control -&gt; install -&gt; IMESupport
+</code></pre><h3 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h3><p><code>SublimeLinter</code> : 用于高亮提示用户编写的代码中存在的不规范和错误的写法, 支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言. </p>
+<p><code>SideBarEnhancements</code> : SideBarEnhancements是一款很实用的右键菜单增强插件；在安装该插件前, 在Sublime Text左侧FOLDERS栏中点击右键, 只有寥寥几个简单的功能</p>
+<p><code>Javascript-API-Completions</code> : 支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件, 是少数支持sublime text 3的后缀提示的插件, HTML5标签提示sublime text3自带, 不过JQuery提示还是很有用处的, 也可设置要提示的语言. </p>
+<p><code>Git</code> : </p>
+<p><code>Glue</code> : 会在界面下方显示一个小窗口, 你可以在那里写Shell脚本. 这样一来, 你的编辑器就不仅仅局限于使用Git了</p>
+<p><code>GitGutter &amp; Modifi</code>c : 这些插件可以高亮相对于上次提交有所变动的行, 换句话说是实时的diff工具<br>    GitGutter : 这是一个小巧有用的插件, 它会告诉你自上次git commit以来已经改变的行. 一个指示器显示在行号的旁边. </p>
+<p><code>PlainTasks</code> : 杰出的待办事项表！所有的任务都保持在文件中, 所以可以很方便的把任务和项目绑定在一起. 可以创建项目, 贴标签, 设置日期. 有竞争力的用户界面和快捷键. </p>
+<p><code>Lua</code> : </p>
+<p><code>Python</code> : </p>
+<p><code>AllAutocomplete</code> : 搜索全部打开的标签页</p>
+<p><code>Emmet</code> : HTML 快速补全</p>
+<p><code>markdown</code> : </p>
+<p><code>anaconda</code> : Python IDE</p>
 <pre><code>anaconda 不能与 jedi 同时存在, 会出现 左括号无法写入的情况.
-</code></pre><p> <code>GBK support</code> : 支持 GBK 编码</p>
-<p> <code>SublimeTmpl</code> : 支持文件模板, <a href="https://github.com/kairyou/SublimeTmpl" target="_blank" rel="noopener">git 地址</a>.</p>
+</code></pre><p><code>GBK support</code> : 支持 GBK 编码</p>
+<p><code>SublimeTmpl</code> : 支持文件模板, <a href="https://github.com/kairyou/SublimeTmpl" target="_blank" rel="noopener">git 地址</a>.</p>
 <pre><code>默认模板支持及快捷键
     ctrl+alt+h html
     ctrl+alt+j javascript
@@ -508,16 +491,12 @@ SUBLIME TEXT 2
             # 支持 ${saved_filename} 变量
             &quot;enable_file_variables_on_save&quot;: true,
         }
-</code></pre></li>
-<li><p>设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</p>
-<pre><code>[
+</code></pre><h3 id="设置快捷键-在SublimeText里-打开Preferences-gt-Key-Bindings-User-我设置的快捷键："><a href="#设置快捷键-在SublimeText里-打开Preferences-gt-Key-Bindings-User-我设置的快捷键：" class="headerlink" title="设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键："></a>设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</h3><pre><code>[
     { &quot;keys&quot;: [&quot;ctrl+f9&quot;], &quot;command&quot;: &quot;build&quot; },
     { &quot;keys&quot;: [&quot;f10&quot;], &quot;command&quot;: &quot;build&quot;, &quot;args&quot;: {&quot;variant&quot;: &quot;Run&quot;} },
     { &quot;keys&quot;: [&quot;ctrl+shift+x&quot;], &quot;command&quot;: &quot;toggle_comment&quot;, &quot;args&quot;: { &quot;block&quot;: true } },
 ]       
-</code></pre></li>
-</ol>
-
+</code></pre>
       
     </div>
     
@@ -547,8 +526,8 @@ SUBLIME TEXT 2
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/markdown-语法总结/" rel="next" title="markdown 语法总结">
-                <i class="fa fa-chevron-left"></i> markdown 语法总结
+              <a href="/2018/03/14/Hexo-nexT-博客建设指南/" rel="next" title="Hexo+nexT 博客建设指南">
+                <i class="fa fa-chevron-left"></i> Hexo+nexT 博客建设指南
               </a>
             
           </div>
@@ -669,6 +648,16 @@ SUBLIME TEXT 2
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/pyfdtic" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -691,7 +680,7 @@ SUBLIME TEXT 2
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-初始化配置"><span class="nav-number">1.</span> <span class="nav-text">1. 初始化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-插件"><span class="nav-number">2.</span> <span class="nav-text">2. 插件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化配置"><span class="nav-number">1.</span> <span class="nav-text">初始化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Linux-换行符"><span class="nav-number">1.1.</span> <span class="nav-text">设置 Linux 换行符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-tab-为-4-个空格"><span class="nav-number">1.2.</span> <span class="nav-text">设置 tab 为 4 个空格.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动保存"><span class="nav-number">1.3.</span> <span class="nav-text">自动保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-package-controll"><span class="nav-number">2.1.</span> <span class="nav-text">install package controll</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大块方框"><span class="nav-number">2.2.</span> <span class="nav-text">大块方框,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法光标跟随"><span class="nav-number">2.3.</span> <span class="nav-text">中文输入法光标跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用插件"><span class="nav-number">2.4.</span> <span class="nav-text">常用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置快捷键-在SublimeText里-打开Preferences-gt-Key-Bindings-User-我设置的快捷键："><span class="nav-number">2.5.</span> <span class="nav-text">设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</span></a></li></ol></li></ol></div>
             
 
           </div>
