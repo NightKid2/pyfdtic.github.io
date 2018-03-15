@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="pyfdtic&#39;s blog">
 <meta property="og:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T01:43:58.000Z">
+<meta property="og:updated_time" content="2018-03-15T01:49:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT 博客建设指南">
 <meta name="twitter:description" content="Hexo 搭建 Github 博客一. 开始使用1. 安装 git$ yum install git -y 2. 安装 NodeJS$ git clone https://github.com/creationix/nvm.git $ source nvm/nvm.sh   $ nvm install stable 3. 设置 Github3.1 注册 github3.2 创建 github pa">
@@ -534,7 +534,26 @@ $ vim themes/next/_config.yml
     google_analytics: UA-[numbers]
     baidu_analytics: your-analytics-id
 </code></pre><p>站内搜索: </p>
-<h4 id="主题配置参考"><a href="#主题配置参考" class="headerlink" title="主题配置参考"></a>主题配置参考</h4><p><strong>站点配置</strong></p>
+<pre><code>$ npm install hexo-generator-searchdb --save
+
+$ vim _config.yml
+
+    search:
+      path: search.xml
+      field: post
+      format: html
+      limit: 10000
+
+$ vim themes/next/_config.yml
+
+    local_search:
+      enable: true
+      # if auto, trigger search by changing input
+      # if manual, trigger search by pressing enter key or search button
+      trigger: auto
+      # show top n results per article, show all results by setting to -1
+      top_n_per_article: -1
+</code></pre><h4 id="主题配置参考"><a href="#主题配置参考" class="headerlink" title="主题配置参考"></a>主题配置参考</h4><p><strong>站点配置</strong></p>
 <pre><code># =============================================================================
 # NexT Theme configuration
 # =============================================================================
