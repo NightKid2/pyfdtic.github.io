@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="区块元素    段落     1. 类 Setext 格式 : 底线 形式          最高阶标题 : ====          第二阶标题 : ----          示例 :             This is H1             ==========              This is H2             ----------      2. 类 a">
+<meta name="description" content="段落标题  在行首插入 1 - 6 个 # ,对应 标题1 - 标题6  ## 会在标题下面插入一个横线, 作为分割.  区块引用  普通区块引用  嵌套区块引用    列表  有序列表 数字 + . 无序列表 * + - , 作用相同, 无差别   代码  1.代码块 `缩进4个空格, 或一个制表符, 代码块会一直持续到没有缩进的哪一行, 或者文件结尾`  2.小段代码 `反引号包含小段代码`">
 <meta name="keywords" content="markdown,标记语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="markdown 语法总结">
 <meta property="og:url" content="https://pyfdtic.github.io/2018/03/14/markdown-语法总结/index.html">
 <meta property="og:site_name" content="Pyfdtic&#39;s Blog">
-<meta property="og:description" content="区块元素    段落     1. 类 Setext 格式 : 底线 形式          最高阶标题 : ====          第二阶标题 : ----          示例 :             This is H1             ==========              This is H2             ----------      2. 类 a">
+<meta property="og:description" content="段落标题  在行首插入 1 - 6 个 # ,对应 标题1 - 标题6  ## 会在标题下面插入一个横线, 作为分割.  区块引用  普通区块引用  嵌套区块引用    列表  有序列表 数字 + . 无序列表 * + - , 作用相同, 无差别   代码  1.代码块 `缩进4个空格, 或一个制表符, 代码块会一直持续到没有缩进的哪一行, 或者文件结尾`  2.小段代码 `反引号包含小段代码`">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T02:54:58.000Z">
+<meta property="og:updated_time" content="2018-03-15T09:27:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown 语法总结">
-<meta name="twitter:description" content="区块元素    段落     1. 类 Setext 格式 : 底线 形式          最高阶标题 : ====          第二阶标题 : ----          示例 :             This is H1             ==========              This is H2             ----------      2. 类 a">
+<meta name="twitter:description" content="段落标题  在行首插入 1 - 6 个 # ,对应 标题1 - 标题6  ## 会在标题下面插入一个横线, 作为分割.  区块引用  普通区块引用  嵌套区块引用    列表  有序列表 数字 + . 无序列表 * + - , 作用相同, 无差别   代码  1.代码块 `缩进4个空格, 或一个制表符, 代码块会一直持续到没有缩进的哪一行, 或者文件结尾`  2.小段代码 `反引号包含小段代码`">
 
 
 
@@ -405,8 +405,101 @@
       
 
       
-        <p>区块元素<br>    段落</p>
-<pre><code>    1. 类 Setext 格式 : 底线 形式
+        <ol>
+<li><p>段落标题</p>
+<p> <code>在行首插入 1 - 6 个 # ,对应 标题1 - 标题6</code></p>
+<p> <code>## 会在标题下面插入一个横线, 作为分割.</code></p>
+</li>
+<li><p>区块引用</p>
+<blockquote>
+<p>普通区块引用</p>
+<blockquote>
+<p>嵌套区块引用</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>列表</p>
+<ol>
+<li>有序列表<br> <code>数字 + .</code></li>
+<li>无序列表<br> <code>* + - , 作用相同, 无差别</code></li>
+</ol>
+</li>
+<li><p>代码</p>
+<p> 1.代码块</p>
+<pre><code>`缩进4个空格, 或一个制表符, 代码块会一直持续到没有缩进的哪一行, 或者文件结尾`
+</code></pre><p> 2.小段代码</p>
+<pre><code>`反引号包含小段代码`
+</code></pre></li>
+<li><p>分割线</p>
+<pre><code>三个以上的星号,减号, 来建立一个分割线, 行内不能有其他东西
+</code></pre></li>
+<li><p>链接</p>
+<ol>
+<li><p>普通链接</p>
+<ol>
+<li><p>行内式</p>
+<p> <code>[Name](http://www.baidu.com &quot;Title&quot;)</code></p>
+</li>
+<li><p>引用式</p>
+<p> <code>定义: [id]: http://example.com &quot;Optionnal Title&quot;</code><br> <code>引用: [Name][id]</code></p>
+</li>
+</ol>
+</li>
+<li><p>图片</p>
+<ol>
+<li><p>行内式</p>
+<p> <code>![Alt text](/path/to/img.jpg &quot;Optional title&quot;)</code> </p>
+</li>
+<li><p>引用式</p>
+<p> <code>定义: [id]: url/to/image  &quot;Optional title attribute&quot;</code><br> <code>引用: ![Alt text][id]</code></p>
+</li>
+<li>Markdown 无法指定图片的宽高, 如果需要请使用<img></li>
+</ol>
+</li>
+<li><p>自动链接</p>
+<p> <code>针对URL  : &lt;http://www.baidu.com&gt;</code></p>
+<p> <code>针对邮箱 : &lt;admin@example.com&gt;</code></p>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li><p>强调</p>
+<ol>
+<li><p>斜体</p>
+<p> <code>*WORD*</code>    </p>
+</li>
+<li><p>加粗</p>
+<p> <code>**WORD**</code>  </p>
+</li>
+</ol>
+</li>
+<li><p>转义 : 在一些符号前面加上 反斜杠 来插入特殊符号</p>
+</li>
+</ol>
+<p>9.表格基本</p>
+<pre><code>| 表头 | 表头 | 表头 | 表头 |
+| --   | --- | --- | ---  |
+| 内容  | 内容  | 内容  | 内容  |
+</code></pre><p>表格对齐  </p>
+<pre><code>| :--  | ---&gt; 左对齐  
+| ---: | ---&gt; 右对齐  
+| :---:| ---&gt; 居中对齐
+</code></pre><ol>
+<li><p>颜色</p>
+<pre><code>`&lt;font color=&quot;blue&quot;&gt;GREEN&lt;/font&gt;`
+</code></pre><font color="blue">GREEN</font>
+</li>
+<li><p>删除线</p>
+<p><code>~~这里是删除内容~~</code></p>
+</li>
+</ol>
+<p>效果 : </p>
+<p><del>这里是删除内容</del></p>
+<hr>
+<p>区块元素</p>
+<pre><code>段落
+    1. 类 Setext 格式 : 底线 形式
 
         最高阶标题 : ==== 
         第二阶标题 : ----
@@ -605,14 +698,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/14/Hexo-nexT-博客建设指南/" rel="next" title="Hexo+nexT 博客建设指南">
+                <i class="fa fa-chevron-left"></i> Hexo+nexT 博客建设指南
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/14/Hexo-nexT-博客建设指南/" rel="prev" title="Hexo+nexT 博客建设指南">
-                Hexo+nexT 博客建设指南 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/14/Sublime-Text-使用总结/" rel="prev" title="Sublime-Text-使用总结">
+                Sublime-Text-使用总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -681,7 +778,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -692,7 +789,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -703,7 +800,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
