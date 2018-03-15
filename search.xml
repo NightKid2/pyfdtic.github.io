@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[算法复杂度速查表]]></title>
     <url>%2F2018%2F03%2F15%2F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%80%9F%E6%9F%A5%E8%A1%A8%2F</url>
-    <content type="text"><![CDATA[摘要 参考链接 图例绝佳不错一般不佳糟糕 数据结构操作数据结构时间复杂度空间复杂度&nbsp;平均最差最差&nbsp;访问搜索插入删除访问搜索插入删除&nbsp;ArrayO(1)O(n)O(n)O(n)O(1)O(n)O(n)O(n)O(n)StackO(n)O(n)O(1)O(1)O(n)O(n)O(1)O(1)O(n)Singly-Linked ListO(n)O(n)O(1)O(1)O(n)O(n)O(1)O(1)O(n)Doubly-Linked ListO(n)O(n)O(1)O(1)O(n)O(n)O(1)O(1)O(n)Skip ListO(log(n))O(log(n))O(log(n))O(log(n))O(n)O(n)O(n)O(n)O(n log(n))Hash Table-O(1)O(1)O(1)-O(n)O(n)O(n)O(n)Binary Search TreeO(log(n))O(log(n))O(log(n))O(log(n))O(n)O(n)O(n)O(n)O(n)Cartesian Tree-O(log(n))O(log(n))O(log(n))-O(n)O(n)O(n)O(n)B-TreeO(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(n)Red-Black TreeO(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(n)Splay Tree-O(log(n))O(log(n))O(log(n))-O(log(n))O(log(n))O(log(n))O(n)AVL TreeO(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(log(n))O(n) 数组排序算法算法时间复杂度空间复杂度&nbsp;最佳平均最差最差QuicksortO(n log(n))O(n log(n))O(n^2)O(log(n))MergesortO(n log(n))O(n log(n))O(n log(n))O(n)TimsortO(n)O(n log(n))O(n log(n))O(n)HeapsortO(n log(n))O(n log(n))O(n log(n))O(1)Bubble SortO(n)O(n^2)O(n^2)O(1)Insertion SortO(n)O(n^2)O(n^2)O(1)Selection SortO(n^2)O(n^2)O(n^2)O(1)Shell SortO(n)O((nlog(n))^2)O((nlog(n))^2)O(1)Bucket SortO(n+k)O(n+k)O(n^2)O(n)Radix SortO(nk)O(nk)O(nk)O(n+k) 图操作节点 / 边界管理存储增加顶点增加边界移除顶点移除边界查询Adjacency listO(|V|+|E|)O(1)O(1)O(|V| + |E|)O(|E|)O(|V|)Incidence listO(|V|+|E|)O(1)O(1)O(|E|)O(|E|)O(|E|)Adjacency matrixO(|V|^2)O(|V|^2)O(1)O(|V|^2)O(1)O(1)Incidence matrixO(|V| &sdot; |E|)O(|V| &sdot; |E|)O(|V| &sdot; |E|)O(|V| &sdot; |E|)O(|V| &sdot; |E|)O(|E|) 堆操作类型时间复杂度&nbsp;Heapify查找最大值分离最大值提升键插入删除合并Linked List (sorted)-O(1)O(1)O(n)O(n)O(1)O(m+n)Linked List (unsorted)-O(n)O(n)O(1)O(1)O(1)O(1)Binary HeapO(n)O(1)O(log(n))O(log(n))O(log(n))O(log(n))O(m+n)Binomial Heap-O(1)O(log(n))O(log(n))O(1)O(log(n))O(log(n))Fibonacci Heap-O(1)O(log(n))O(1)O(1)O(log(n))O(1) Big-O 复杂度图表]]></content>
+    <content type="text"><![CDATA[数据结构, 排序算法, 图操作, 堆操作, Big-O 算法复杂度速查表. 参考链接 图例 数据结构操作 数组排序算法 图操作复杂度 堆操作复杂度 Big-O 复杂度图表]]></content>
   </entry>
   <entry>
     <title><![CDATA[创业的本质]]></title>
@@ -209,8 +209,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>python 标准库</tag>
         <tag>python 上下文</tag>
+        <tag>python 标准库</tag>
       </tags>
   </entry>
   <entry>
