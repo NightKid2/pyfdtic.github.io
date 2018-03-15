@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Sublime text 3  1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空">
+<meta name="description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
 <meta name="keywords" content="sublime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime-Text-使用总结">
 <meta property="og:url" content="https://pyfdtic.github.io/2018/03/14/Sublime-Text-使用总结/index.html">
 <meta property="og:site_name" content="Pyfdtic&#39;s Blog">
-<meta property="og:description" content="Sublime text 3  1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空">
+<meta property="og:description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T03:26:17.000Z">
+<meta property="og:updated_time" content="2018-03-15T04:38:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime-Text-使用总结">
-<meta name="twitter:description" content="Sublime text 3  1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空">
+<meta name="twitter:description" content="1. 初始化配置 设置 Linux 换行符 Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF  设置 tab 为 4 个空格. Preference -&amp;">
 
 
 
@@ -405,8 +405,7 @@
       
 
       
-        <p>Sublime text 3 </p>
-<h2 id="1-初始化配置"><a href="#1-初始化配置" class="headerlink" title="1. 初始化配置"></a>1. 初始化配置</h2><ol>
+        <h2 id="1-初始化配置"><a href="#1-初始化配置" class="headerlink" title="1. 初始化配置"></a>1. 初始化配置</h2><ol>
 <li><p>设置 Linux 换行符</p>
 <pre><code>Perference-&gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项：
 - system : system是根据当前系统情况设置, 
@@ -447,87 +446,69 @@ SUBLIME TEXT 2
 </code></pre></li>
 <li><p>常用插件</p>
 <p> <code>SublimeLinter</code> : 用于高亮提示用户编写的代码中存在的不规范和错误的写法, 支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言. </p>
-<p> <code>SideBarEnhancements</code> : SideBarEnhancements是一款很实用的右键菜单增强插件；在安装该插件前, 在Sublime Text左侧FOLDERS栏中点击右键, 只有寥寥几个简单的功能；安装了就相当于给其丰了大胸一般.  </p>
-</li>
-</ol>
-<pre><code>`Javascript-API-Completions` : 支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件, 是少数支持sublime text 3的后缀提示的插件, HTML5标签提示sublime text3自带, 不过JQuery提示还是很有用处的, 也可设置要提示的语言. 
+<p> <code>SideBarEnhancements</code> : SideBarEnhancements是一款很实用的右键菜单增强插件；在安装该插件前, 在Sublime Text左侧FOLDERS栏中点击右键, 只有寥寥几个简单的功能</p>
+<p> <code>Javascript-API-Completions</code> : 支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件, 是少数支持sublime text 3的后缀提示的插件, HTML5标签提示sublime text3自带, 不过JQuery提示还是很有用处的, 也可设置要提示的语言. </p>
+<p> <code>Git</code> : </p>
+<p> <code>Glue</code> : 会在界面下方显示一个小窗口, 你可以在那里写Shell脚本. 这样一来, 你的编辑器就不仅仅局限于使用Git了</p>
+<p> <code>GitGutter &amp; Modifi</code>c : 这些插件可以高亮相对于上次提交有所变动的行, 换句话说是实时的diff工具</p>
+<pre><code>GitGutter : 这是一个小巧有用的插件, 它会告诉你自上次git commit以来已经改变的行. 一个指示器显示在行号的旁边. 
+</code></pre><p> <code>PlainTasks</code> : 杰出的待办事项表！所有的任务都保持在文件中, 所以可以很方便的把任务和项目绑定在一起. 可以创建项目, 贴标签, 设置日期. 有竞争力的用户界面和快捷键. </p>
+<p> <code>Lua</code> : </p>
+<p> <code>Python</code> : </p>
+<p> <code>AllAutocomplete</code> : 搜索全部打开的标签页</p>
+<p> <code>Emmet</code> : HTML 快速补全</p>
+<p> <code>markdown</code> : </p>
+<p> <code>anaconda</code> : Python IDE</p>
+<pre><code>anaconda 不能与 jedi 同时存在, 会出现 左括号无法写入的情况.
+</code></pre><p> <code>GBK support</code> : 支持 GBK 编码</p>
+<p> <code>SublimeTmpl</code> : 支持文件模板, <a href="https://github.com/kairyou/SublimeTmpl" target="_blank" rel="noopener">git 地址</a>.</p>
+<pre><code>默认模板支持及快捷键
+    ctrl+alt+h html
+    ctrl+alt+j javascript
+    ctrl+alt+c css
+    ctrl+alt+p php
+    ctrl+alt+r ruby
+    ctrl+alt+shift+p python
 
-`Git` : 
+添加自定义模板文件及快捷键 : 参考 https://segmentfault.com/a/1190000008674119
 
-`Glue` : 会在界面下方显示一个小窗口, 你可以在那里写Shell脚本. 这样一来, 你的编辑器就不仅仅局限于使用Git了
+    1. 新建并编辑自定义模板文件 Packages\User\SublimeTmpl\templates\hexomd.tmpl
 
-`GitGutter &amp; Modifi`c : 这些插件可以高亮相对于上次提交有所变动的行, 换句话说是实时的diff工具
-    GitGutter : 这是一个小巧有用的插件, 它会告诉你自上次git commit以来已经改变的行. 一个指示器显示在行号的旁边. 
+        ---
+        title: ${saved_filename}
+        date: ${date}
+        categories:
+        tags:
+        ---
+        摘要
+        &lt;!-- more --&gt;
+        正文
 
-`PlainTasks` : 杰出的待办事项表！所有的任务都保持在文件中, 所以可以很方便的把任务和项目绑定在一起. 可以创建项目, 贴标签, 设置日期. 有竞争力的用户界面和快捷键. 
+    2. sublime 模板文件定义
 
-`Lua` : 
-
-`Python` : 
-
-`AllAutocomplete` : 搜索全部打开的标签页
-
-`Emmet` : HTML 快速补全
-
-`markdown` : 
-
-`anaconda` : Python IDE
-
-    anaconda 不能与 jedi 同时存在, 会出现 左括号无法写入的情况.
-
-`GBK support` : 支持 GBK 编码
-
-`SublimeTmpl` : 支持文件模板, [git 地址](https://github.com/kairyou/SublimeTmpl).
-
-
-    默认模板支持及快捷键
-        ctrl+alt+h html
-        ctrl+alt+j javascript
-        ctrl+alt+c css
-        ctrl+alt+p php
-        ctrl+alt+r ruby
-        ctrl+alt+shift+p python
-
-    添加自定义模板文件及快捷键 : 参考 https://segmentfault.com/a/1190000008674119
-
-        1. 新建并编辑自定义模板文件 Packages\User\SublimeTmpl\templates\hexomd.tmpl
-
-            ---
-            title: ${saved_filename}
-            date: ${date}
-            categories:
-            tags:
-            ---
-            摘要
-            &lt;!-- more --&gt;
-            正文
-
-
-        2. sublime 模板文件定义
-
-            [
-                {
-                    &quot;caption&quot;: &quot;Tmpl: Create Hexo Markdown&quot;, &quot;command&quot;: &quot;sublime_tmpl&quot;,
-                    &quot;args&quot;: {&quot;type&quot;: &quot;hexomd&quot;}
-                }
-            ]
-
-        3. 快捷键定义
-
-            [
-                {
-                    &quot;keys&quot;: [&quot;ctrl+alt+m&quot;], &quot;command&quot;: &quot;sublime_tmpl&quot;,
-                    &quot;args&quot;: {&quot;type&quot;: &quot;hexomd&quot;}, &quot;context&quot;: [{&quot;key&quot;: &quot;sublime_tmpl.hexomd&quot;}]
-                }
-            ]
-
-        4. 用户设置定义
-
+        [
             {
-                # 支持 ${saved_filename} 变量
-                &quot;enable_file_variables_on_save&quot;: true,
+                &quot;caption&quot;: &quot;Tmpl: Create Hexo Markdown&quot;, &quot;command&quot;: &quot;sublime_tmpl&quot;,
+                &quot;args&quot;: {&quot;type&quot;: &quot;hexomd&quot;}
             }
-</code></pre><ol>
+        ]
+
+    3. 快捷键定义
+
+        [
+            {
+                &quot;keys&quot;: [&quot;ctrl+alt+m&quot;], &quot;command&quot;: &quot;sublime_tmpl&quot;,
+                &quot;args&quot;: {&quot;type&quot;: &quot;hexomd&quot;}, &quot;context&quot;: [{&quot;key&quot;: &quot;sublime_tmpl.hexomd&quot;}]
+            }
+        ]
+
+    4. 用户设置定义
+
+        {
+            # 支持 ${saved_filename} 变量
+            &quot;enable_file_variables_on_save&quot;: true,
+        }
+</code></pre></li>
 <li><p>设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</p>
 <pre><code>[
     { &quot;keys&quot;: [&quot;ctrl+f9&quot;], &quot;command&quot;: &quot;build&quot; },
@@ -566,8 +547,8 @@ SUBLIME TEXT 2
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/Hexo-nexT-博客建设指南/" rel="next" title="Hexo+nexT 博客建设指南">
-                <i class="fa fa-chevron-left"></i> Hexo+nexT 博客建设指南
+              <a href="/2018/03/14/markdown-语法总结/" rel="next" title="markdown 语法总结">
+                <i class="fa fa-chevron-left"></i> markdown 语法总结
               </a>
             
           </div>
