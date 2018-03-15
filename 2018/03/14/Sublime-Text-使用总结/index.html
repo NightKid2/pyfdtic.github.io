@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Pyfdtic&#39;s Blog">
 <meta property="og:description" content="初始化配置设置 Linux 换行符Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF 设置 tab 为 4 个空格.Preference -&amp;gt; Set">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T04:53:16.000Z">
+<meta property="og:updated_time" content="2018-03-15T07:28:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime-Text-使用总结">
 <meta name="twitter:description" content="初始化配置设置 Linux 换行符Perference-&amp;gt;Setting-*. 设置对象是 default_line_ending, 这个参数有三 个可用选项： - system : system是根据当前系统情况设置,  - windows : windows使用的CRLF,  - unix : unix使用的是 LF 设置 tab 为 4 个空格.Preference -&amp;gt; Set">
@@ -418,7 +418,12 @@
 </code></pre><h3 id="自动保存"><a href="#自动保存" class="headerlink" title="自动保存"></a>自动保存</h3><pre><code>Preference -&gt; Settings-User
 
 &quot;save_on_focus_lost&quot;: true
-</code></pre><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="install-package-controll"><a href="#install-package-controll" class="headerlink" title="install package controll"></a>install package controll</h3><pre><code>SUBLIME TEXT 3
+</code></pre><h3 id="手动安装插件"><a href="#手动安装插件" class="headerlink" title="手动安装插件"></a>手动安装插件</h3><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><pre><code>Preference -&gt; Browse Package
+
+把下载的插件解压到打开的文件夹中, 解压后即可.
+
+去除解压后文件夹中的 `-` 等字符, 重启 sublime 即可.
+</code></pre><h3 id="install-package-controll"><a href="#install-package-controll" class="headerlink" title="install package controll"></a>install package controll</h3><pre><code>SUBLIME TEXT 3
 
     import urllib.request,os,hashlib; h = &apos;df21e130d211cfc94d9b0905775a7c0f&apos; + &apos;1e3d39e33b79698005270310898eea76&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)      
 
@@ -467,16 +472,17 @@ SUBLIME TEXT 2
         &lt;!-- more --&gt;
         正文
 
-    2. sublime 模板文件定义
+    2. sublime 模板文件定义 : Commands-User
 
         [
             {
-                &quot;caption&quot;: &quot;Tmpl: Create Hexo Markdown&quot;, &quot;command&quot;: &quot;sublime_tmpl&quot;,
+                &quot;caption&quot;: &quot;Tmpl: Create Hexo Markdown&quot;, 
+                &quot;command&quot;: &quot;sublime_tmpl&quot;,
                 &quot;args&quot;: {&quot;type&quot;: &quot;hexomd&quot;}
             }
         ]
 
-    3. 快捷键定义
+    3. 快捷键定义 : KeyBing-User
 
         [
             {
@@ -485,7 +491,7 @@ SUBLIME TEXT 2
             }
         ]
 
-    4. 用户设置定义
+    4. 用户设置定义 : Settings-User
 
         {
             # 支持 ${saved_filename} 变量
@@ -526,8 +532,8 @@ SUBLIME TEXT 2
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/Hexo-nexT-博客建设指南/" rel="next" title="Hexo+nexT 博客建设指南">
-                <i class="fa fa-chevron-left"></i> Hexo+nexT 博客建设指南
+              <a href="/2018/03/14/markdown-语法总结/" rel="next" title="markdown 语法总结">
+                <i class="fa fa-chevron-left"></i> markdown 语法总结
               </a>
             
           </div>
@@ -615,7 +621,7 @@ SUBLIME TEXT 2
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -637,7 +643,7 @@ SUBLIME TEXT 2
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -680,7 +686,7 @@ SUBLIME TEXT 2
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化配置"><span class="nav-number">1.</span> <span class="nav-text">初始化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Linux-换行符"><span class="nav-number">1.1.</span> <span class="nav-text">设置 Linux 换行符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-tab-为-4-个空格"><span class="nav-number">1.2.</span> <span class="nav-text">设置 tab 为 4 个空格.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动保存"><span class="nav-number">1.3.</span> <span class="nav-text">自动保存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-package-controll"><span class="nav-number">2.1.</span> <span class="nav-text">install package controll</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大块方框"><span class="nav-number">2.2.</span> <span class="nav-text">大块方框,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法光标跟随"><span class="nav-number">2.3.</span> <span class="nav-text">中文输入法光标跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用插件"><span class="nav-number">2.4.</span> <span class="nav-text">常用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置快捷键-在SublimeText里-打开Preferences-gt-Key-Bindings-User-我设置的快捷键："><span class="nav-number">2.5.</span> <span class="nav-text">设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化配置"><span class="nav-number">1.</span> <span class="nav-text">初始化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-Linux-换行符"><span class="nav-number">1.1.</span> <span class="nav-text">设置 Linux 换行符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置-tab-为-4-个空格"><span class="nav-number">1.2.</span> <span class="nav-text">设置 tab 为 4 个空格.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动保存"><span class="nav-number">1.3.</span> <span class="nav-text">自动保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动安装插件"><span class="nav-number">1.4.</span> <span class="nav-text">手动安装插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-package-controll"><span class="nav-number">2.1.</span> <span class="nav-text">install package controll</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大块方框"><span class="nav-number">2.2.</span> <span class="nav-text">大块方框,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法光标跟随"><span class="nav-number">2.3.</span> <span class="nav-text">中文输入法光标跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用插件"><span class="nav-number">2.4.</span> <span class="nav-text">常用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置快捷键-在SublimeText里-打开Preferences-gt-Key-Bindings-User-我设置的快捷键："><span class="nav-number">2.5.</span> <span class="nav-text">设置快捷键. 在SublimeText里, 打开Preferences -&gt; Key Bindings - User, 我设置的快捷键：</span></a></li></ol></li></ol></div>
             
 
           </div>
